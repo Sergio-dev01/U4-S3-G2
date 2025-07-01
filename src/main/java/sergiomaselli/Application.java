@@ -26,7 +26,17 @@ public class Application {
                     50
             );
 
+            Evento evento2 = new Evento(
+                    "discoteca",
+                    LocalDate.of(2025, 6, 20),
+                    "Divertiti",
+                    EventType.PRIVATO,
+                    40
+            );
+
             eventoDAO.save(festa);
+            eventoDAO.save(evento2);
+
 
             // 2. Trova per ID
             Evento trovato = eventoDAO.findById(festa.getId());
